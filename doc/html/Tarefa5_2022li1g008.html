@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Tarefa5_2022li1g008</title><link href="linuwial.css" rel="stylesheet" type="text/css" title="Linuwial" /><link rel="stylesheet" type="text/css" href="quick-jump.css" /><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" /><script src="haddock-bundle.min.js" async="async" type="text/javascript"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { processClass: "mathjax", ignoreClass: ".*" } });</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script></head><body><div id="package-header"><span class="caption empty">&nbsp;</span><ul class="links" id="page-menu"><li><a href="index.html">Contents</a></li><li><a href="doc-index.html">Index</a></li></ul></div><div id="content"><div id="module-header"><table class="info"><tr><th valign="top">Copyright</th><td>Gon&#231;alo Oliveira Cruz &lt;a104346@alunos.uminho.pt&gt;<br />Gon&#231;alo Costa Magalh&#227;es &lt;a104538@alunos.uminho.pt&gt;</td></tr><tr><th>Safe Haskell</th><td>Safe-Inferred</td></tr></table><p class="caption">Tarefa5_2022li1g008</p></div><div id="description"><p class="caption">Description</p><div class="doc"><p>M&#243;dulo para a realiza&#231;&#227;o da Tarefa 5 do projeto de LI1 em 2022/23.</p></div></div><div id="synopsis"><details id="syn"><summary>Synopsis</summary><ul class="details-toggle" data-details-id="syn"><li class="src short"><a href="#v:deslizaJogo">deslizaJogo</a> :: Int -&gt; <a href="LI12223.html#t:Jogo" title="LI12223">Jogo</a> -&gt; <a href="LI12223.html#t:Jogo" title="LI12223">Jogo</a></li></ul></details></div><div id="interface"><h1>Documentation</h1><div class="top"><p class="src"><a id="v:deslizaJogo" class="def">deslizaJogo</a> <a href="#v:deslizaJogo" class="selflink">#</a></p><div class="subs arguments"><p class="caption">Arguments</p><table><tr><td class="src">:: Int</td><td class="doc"><p>A fun&#231;&#227;o recebe tamb&#233;m um n&#250;mero inteiro entre 0 e 100 para gerar aleatoriamente uma nova linha.</p></td></tr><tr><td class="src">-&gt; <a href="LI12223.html#t:Jogo" title="LI12223">Jogo</a></td><td class="doc"><p>A fun&#231;&#227;o recebe um jogo (a posi&#231;&#227;o do jogador e um mapa v&#225;lido). </p></td></tr><tr><td class="src">-&gt; <a href="LI12223.html#t:Jogo" title="LI12223">Jogo</a></td><td class="doc"><p>A fun&#231;&#227;o retornar&#225; um novo jogo, com as mesmas coordenadas que o jogador tinha anteriormente mas agora com uma unidade somada ao &quot;y&quot;, e o mesmo mapa inicialmente inserido mas com uma nova linha no topo e com a &#250;ltima linha removida.</p></td></tr></table></div><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa5_2022li1g008.html#v:deslizaJogo" title="Tarefa5_2022li1g008">deslizaJogo</a></code> faz com que o mapa se v&#225; movendo, ou seja, faz com que seja acrescentada uma linha no topo do mapa e seja retirada a &#250;ltima linha do mesmo ao mesmo tempo.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>deslizaJogo 2 (Jogo (Jogador (1,1))
+</code></strong>                           (Mapa 3 [(Relva,[Nenhum,Nenhum,Nenhum]),
+                           (Rio (-3),[Nenhum,Tronco,Nenhum]),
+                           (Relva,[Nenhum,Nenhum,Nenhum])])) 
+Jogo (Jogador (1,2)) 
+(Mapa 3 [(Relva,[Arvore,Nenhum,Arvore]),
+(Relva,[Nenhum,Nenhum,Nenhum]),
+(Rio (-3),[Nenhum,Tronco,Nenhum])]) 
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>deslizaJogo 86 (Jogo (Jogador (1,1))
+</code></strong>                           (Mapa 3 [(Relva,[Nenhum,Nenhum,Nenhum]),
+                           (Rio (-3),[Nenhum,Tronco,Nenhum]),
+                           (Relva,[Nenhum,Nenhum,Nenhum])])) 
+Jogo (Jogador (1,2)) 
+(Mapa 3 [(Estrada 1,[Carro,Carro,Nenhum]),
+(Relva,[Nenhum,Nenhum,Nenhum]),
+(Rio (-3),[Nenhum,Tronco,Nenhum])]) 
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>deslizaJogo 20 (Jogo (Jogador (1,1))
+</code></strong>                           (Mapa 3 [(Relva,[Nenhum,Nenhum,Nenhum]),
+                           (Rio (-3),[Nenhum,Tronco,Nenhum]),
+                           (Relva,[Nenhum,Nenhum,Nenhum])])) 
+Jogo (Jogador (1,2)) 
+(Mapa 3 [(Rio 4,[Tronco,Nenhum,Nenhum]),
+(Relva,[Nenhum,Nenhum,Nenhum]),
+(Rio (-3),[Nenhum,Tronco,Nenhum])]) 
+</pre></div></div></div></div><div id="footer"><p>Produced by <a href="http://www.haskell.org/haddock/">Haddock</a> version 2.26.0</p></div></body></html>
