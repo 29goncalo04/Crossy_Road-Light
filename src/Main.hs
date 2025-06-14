@@ -6,7 +6,7 @@ Copyright   : Gonçalo Oliveira Cruz <a104346@alunos.uminho.pt>
 
 Módulo para a realização da Tarefa 6 do projeto de LI1 em 2022/23.
 -}
-module Tarefa6_2022li1g008 where
+module Main where
 import System.Random
 import Data.List
 import LI12223
