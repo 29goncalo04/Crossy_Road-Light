@@ -1,67 +1,55 @@
-# Laboratórios de Informática I
+# Crossy Road Light – Haskell Game
 
-## Interpretador
+## Overview
 
-Pode abrir o interpretador do Haskell (GHCi) utilizando o cabal ou diretamente.
+Crossy Road Light is a game developed in Haskell that recreates the classic "Crossy Road" experience. The project focuses on implementing game logic, simple graphics rendering with BMP files, and event handling using the Gloss library. It serves as a practical demonstration of functional programming applied to 2D games.
 
-1. Usando o cabal
+## Features
 
-```bash
-$ cabal repl
-```
+- Player control and movement
+- Multiple obstacle types (cars, trees, logs, rivers)
+- Menus: Main menu, Pause, Game Over
+- Graphics rendered with BMP images
+- Event handling and game loop managed by Gloss library
 
-2. Usando o GHCi
+## Screenshots
 
-```bash
-$ ghci -i="src" -i="tests" src/Main.hs
-```
+![Main Menu](./screenshots/main_menu.png)  
+*Main menu screen.*
 
-## Testes
+---
 
-O projecto utiliza a biblioteca [HUnit](https://hackage.haskell.org/package/HUnit) para fazer testes unitários.
+![Gameplay](./screenshots/gameplay.png)
+*Gameplay showing player navigating obstacles.*
 
-Pode correr os testes utilizando uma das seguintes alternativas:
+---
 
-1. Usando o `cabal`
+![Pause Menu](./screenshots/pause_menu.png)
+*Pause menu interface.*
 
-```bash
-$ cabal test
-```
+---
 
-2. Usando o GHCi
+![Game over](./screenshots/game_over.png)
+*Game over screen.*
 
-```bash
-$ ghci -i="src" -i="tests" tests/Spec.hs
->>> runTestsT1 -- Correr os testes tarefa 1
->>> runTestsT2 -- Correr os testes tarefa 2
->>> runTestsT3 -- Correr os testes tarefa 3
->>> runTestsT4 -- Correr os testes tarefa 4
->>> main -- Correr todos os testes
-```
+## How to Run
 
-3. Usando o wrapper `runhaskell`
+1. Compile the project using GHC (in the source code folder -> "xxxxxxxx/Crossy_Road-Light/src"):
 
-```bash
-$ runhaskell -i="src" -i="tests" tests/Spec.hs
-```
+   ```bash
+   ghc -o CrossyRoad Main.hs
+   ```
 
-## Documentação
+2. Run the game:
 
-Pode gerar a documentação com o [Haddock](https://haskell-haddock.readthedocs.io/).
+   ```bash
+   ./CrossyRoad
+   ```
 
-1. Usando o `cabal`
+## How to Play
 
-```bash
-$ cabal haddock --haddock-all
-```
-
-2. Usando diretamente o `haddock`
-
-```bash
-$ haddock -h -o doc/html src/*.hs
-```
-
-## Grupo 8
-
-- **A104346** Gonçalo Oliveira Cruz;
-- **A104538** Gonçalo Costa Magalhães;
+- Use the arrow keys to move the player character.  
+- Avoid obstacles such as cars and rivers.  
+- Cross as many lanes as possible to increase your score.  
+- Press 'space' to pause the game.  
+- The game ends if the player hits an obstacle.
